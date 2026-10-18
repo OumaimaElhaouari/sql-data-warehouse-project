@@ -1,42 +1,42 @@
-# Data Warehouse SQL Server : CRM + ERP
+# SQL Server Data Warehouse: CRM + ERP
 
-Entrepôt de données construit avec **SQL Server** selon l'architecture **Medallion** (Bronze → Silver → Gold), à partir de six fichiers CSV issus de deux systèmes : un CRM et un ERP.
+A data warehouse built with **SQL Server** following the **Medallion** architecture (Bronze → Silver → Gold), using six CSV files from two source systems: a CRM and an ERP.
 
-> Projet basé sur le projet pédagogique de [Data With Baraa](https://github.com/DataWithBaraa/sql-data-warehouse-project) (licence MIT).
+> Project based on the educational project by [Data With Baraa](https://github.com/DataWithBaraa/sql-data-warehouse-project) (MIT license).
 
-## 🎯 Objectif
+## 🎯 Objective
 
-Consolider les données de ventes de deux sources dans un modèle propre, intégré et prêt pour l'analyse.
+Consolidate sales data from two sources into a clean, integrated model that is ready for analysis.
 
 ## 🏗️ Architecture
 
 
-- **Bronze** : données brutes chargées depuis les CSV (`BULK INSERT`).
-- **Silver** : données nettoyées et standardisées.
-- **Gold** : modèle en étoile (`fact_sales`, `dim_customers`, `dim_products`).
+- **Bronze**: raw data loaded from the CSV files (`BULK INSERT`).
+- **Silver**: cleaned and standardized data.
+- **Gold**: star schema (`fact_sales`, `dim_customers`, `dim_products`).
 
 
 
-## 🧹 Principaux traitements (Silver)
+## 🧹 Main Transformations (Silver)
 
-- Suppression des doublons (un seul enregistrement par client)
-- Normalisation des libellés (genre, statut marital, pays, gamme de produit)
-- Correction des dates et des montants incohérents
-- Gestion des valeurs manquantes (`n/a`, `0`, `NULL`)
+- Duplicate removal (one record per customer)
+- Label normalization (gender, marital status, country, product line)
+- Correction of inconsistent dates and amounts
+- Handling of missing values (`n/a`, `0`, `NULL`)
 
 
 
-## ▶️ Exécution
+## ▶️ Execution
 
-​```sql
+```sql
 EXEC bronze.load_bronze;
 EXEC silver.load_silver;
-​```
+```
 
-## 🛠️ Outils
+## 🛠️ Tools
 
 SQL Server · SSMS · Git · draw.io
 
-## 👤 Auteur
+## 👤 Author
 
 **Oumaima El Haouari**, [LinkedIn](https://www.linkedin.com/in/oumaima-el-haouari-57a800250/?isSelfProfile=true)
