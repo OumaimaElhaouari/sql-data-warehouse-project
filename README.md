@@ -2,7 +2,7 @@
 
 Entrepôt de données construit avec **SQL Server** selon l'architecture **Medallion** (Bronze → Silver → Gold), à partir de six fichiers CSV issus de deux systèmes : un CRM et un ERP.
 
-> Projet basé sur le projet pédagogique de [Data With Baraa](https://github.com/DataWithBaraa/sql-data-warehouse-project) (licence MIT), que j'ai adapté et amélioré.
+> Projet basé sur le projet pédagogique de [Data With Baraa](https://github.com/DataWithBaraa/sql-data-warehouse-project) (licence MIT).
 
 ## 🎯 Objectif
 
@@ -39,4 +39,4 @@ SQL Server · SSMS · Git · draw.io
 
 ## 👤 Auteur
 
-**[Ton nom]**, [LinkedIn](https://www.linkedin.com/in/oumaima-el-haouari-57a800250/?isSelfProfile=true)
+**Oumaima El Haouari**, [LinkedIn](https://www.linkedin.com/in/oumaima-el-haouari-57a800250/?isSelfProfile=true)
